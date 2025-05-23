@@ -8,8 +8,16 @@ body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
     line-height: 1.6;
     color: #333;
-    background: linear-gradient(135deg, #667eea 0%, #081601 100%);
+    background: linear-gradient(135deg, #333 0%, #4a4f65 100%);
     min-height: 100vh;
+}
+
+p {
+    color: #ffffff;
+}
+
+h3 {
+    color: #ffffff;
 }
 
 
@@ -20,11 +28,12 @@ body {
 }
 
 .app-header {
-    background: rgba(255, 255, 255, 0.95);
+    background: rgb(2 2 2 / 95%);
     backdrop-filter: blur(10px);
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
     padding: 20px 0;
     margin-bottom: 30px;
+    text-align: center;
 }
 
 .header-content {
@@ -71,8 +80,12 @@ body {
     text-decoration: none;
 }
 
+.comment-text {
+    color: black
+}
+
 .btn-primary {
-    background: linear-gradient(135deg, #667eea 0%, #081601 100%);
+    background: linear-gradient(135deg, #333 0%, #4a4f65 100%);
     color: white;
     box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
 }
@@ -395,7 +408,7 @@ body {
 }
 
 .tracker-section h2 {
-    color: white;
+    color: rgb(14, 13, 13);
     font-size: 1.5rem;
     margin-bottom: 20px;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);

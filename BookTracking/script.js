@@ -105,16 +105,16 @@ document.addEventListener('DOMContentLoaded', function () {
                         <div class="book-content">
                             <h3 class="book-title">${book.title}</h3>
                             <p class="book-author">${book.author}</p>
-                            <div class="book-stats">
-                                <span class="book-stats-label">Progress</span>
-                                <span class="badge">${book.readChapters.length}/${book.totalChapters} chapters</span>
+                            <div class="book-stats" style="color: #ffffff;">
+                                <span class="book-stats-label">Progresso</span>
+                                <span class="badge">${book.readChapters.length}/${book.totalChapters} capítulos</span>
                             </div>
                             <div class="progress-container">
                                 <div class="progress-bar">
                                     <div class="progress-fill ${getProgressColorClass(progress)}" style="width: ${progress}%"></div>
                                 </div>
-                                <div class="progress-info">
-                                    <span>${progress}% complete</span>
+                                <div class="progress-info" style="color: #ffffff;">
+                                    <span>${progress}% completo</span>
                                     ${commentsDisplay}
                                 </div>
                             </div>
@@ -141,7 +141,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
             updateBookDetails();
             renderChapters();
-            renderBooks(); 
+            renderBooks();
         }
     }
 

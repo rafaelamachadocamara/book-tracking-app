@@ -2,20 +2,26 @@
 
 Uma aplicação web simples para organizar e acompanhar sua leitura de livros e capítulos. Ideal para quem quer visualizar o progresso de leitura de forma prática e agradável.
 
+---
+
 ## ✨ Funcionalidades
 
-- Adição de livros com nome, autor e número de capítulos
-- Marcação de capítulos lidos
-- Barra de progresso para cada livro
-- Edição e remoção de livros cadastrados
-- Interface responsiva e fácil de usar
-- Visual moderno com cores agradáveis
+- Adição de livros com nome, autor e número de capítulos  
+- Marcação de capítulos lidos  
+- Barra de progresso para cada livro  
+- Edição e remoção de livros cadastrados  
+- Interface responsiva e fácil de usar  
+- Visual moderno com cores agradáveis  
+
+---
 
 ## 🚀 Tecnologias utilizadas
 
-- 🧱 **HTML** — estrutura da aplicação
-- 🎨 **CSS** — estilização com design moderno e responsivo
-- 🧠 **JavaScript** — lógica da aplicação e persistência com `localStorage`
+- 🧱 **HTML** — estrutura da aplicação  
+- 🎨 **CSS** — estilização com design moderno e responsivo  
+- 🧠 **JavaScript** — lógica da aplicação e persistência com `localStorage`  
+
+---
 
 ## 📦 Como usar
 
@@ -26,21 +32,24 @@ git clone https://github.com/seu-usuario/book-tracker.git
 cd book-tracker
 Abra o arquivo index.html no navegador:
 
+bash
+Copiar
+Editar
 # No terminal ou explorer
 open index.html
 # ou clique duas vezes no arquivo
 Não é necessário instalar dependências — tudo roda diretamente no navegador.
 
-## 📁 Estrutura do projeto
+📁 Estrutura do projeto
+pgsql
+Copiar
+Editar
 book-tracker/
 ├── index.html
 ├── style.css
 └── script.js
-
-## 📄 Licença
+📄 Licença
 Este projeto está licenciado sob a MIT License.
 
-## 🙋‍♀️ Contribuições
+🙋‍♀️ Contribuições
 Sinta-se à vontade para enviar sugestões, relatar problemas ou abrir pull requests!
-
-Feito com 💜 usando apenas HTML, CSS e JavaScript.

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Reading Journey</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="app-header">
+        <div class="container header-content">
+            <div class="header-title">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="book-icon">
+                    <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"></path>
+                </svg>
+                <h1>Minha Jornada De Leitura</h1>
+            </div>
+            <button id="addBookBtn" class="btn btn-primary">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M5 12h14"></path>
+                    <path d="M12 5v14"></path>
+                </svg>
+                Adicionar Livro
+            </button>
+        </div>
+        <p class="container subtitle">Acompanhe seu progresso de leitura e registre seus pensamentos</p>
+    </header>
+
+    <main class="container">
+        <div id="bookFormContainer" class="form-container hidden">
+            <div class="card">
+                <div class="card-header">
+                    <h2>Adicione novo livro</h2>
+                    <button id="closeFormBtn" class="btn-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M18 6 6 18"></path>
+                            <path d="m6 6 12 12"></path>
+                        </svg>
+                    </button>
+                </div>
+                <div class="card-content">
+                    <form id="bookForm">
+                        <div class="form-group">
+                            <label for="title">Título do livro *</label>
+                            <input type="text" id="title" placeholder="Enter book title" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="author">Autor *</label>
+                            <input type="text" id="author" placeholder="Enter author name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="coverUrl">Imagem da capa URL (opcional)</label>
+                            <input type="text" id="coverUrl" placeholder="https://example.com/book-cover.jpg">
+                        </div>
+                        <div class="form-group">
+                            <label for="totalChapters">Total de capítulo *</label>
+                            <input type="number" id="totalChapters" min="1" value="1" required>
+                        </div>
+                        <div class="form-actions">
+                            <button type="submit" class="btn btn-primary">Adicionar livro</button>
+                            <button type="button" id="cancelBtn" class="btn btn-outline">Cancelar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid-layout">
+            <div class="library-section">
+                <h2>Sua biblioteca</h2>
+                <div id="booksContainer" class="books-grid">
+                    <div id="emptyLibrary" class="card text-center empty-state">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="book-icon">
+                            <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"></path>
+                        </svg>
+                        <h3>Ainda não há livros</h3>
+                        <p>Comece sua jornada de leitura adicionando seu primeiro livro</p>
+                        <button id="emptyAddBookBtn" class="btn btn-primary">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M5 12h14"></path>
+                                <path d="M12 5v14"></path>
+                            </svg>
+                            Adicione seu primeiro livro
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tracker-section">
+                <div id="trackerPlaceholder" class="card">
+                    <div class="card-header">
+                        <h2>Acompanhar capítulo</h2>
+                    </div>
+                    <div class="card-content text-center empty-tracker">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="book-icon">
+                            <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"></path>
+                        </svg>
+                        <p>Selecione um livro para acompanhar seu progresso de leitura e adicionar comentários aos capítulos</p>
+                    </div>
+                </div>
+
+                <div id="chapterTracker" class="hidden">
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="book-info">
+                                <div id="bookCover" class="book-cover">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" class="book-icon">
+                                        <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"></path>
+                                    </svg>
+                                </div>
+                                <div class="book-details">
+                                    <h3 id="bookTitle">Título do livro</h3>
+                                    <p id="bookAuthor">Autor</p>
+                                    <span id="bookProgress" class="badge">0/0 capítulos</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-content">
+                            <div class="progress-container">
+                                <div class="progress-bar">
+                                    <div id="progressFill" class="progress-fill"></div>
+                                </div>
+                                <div class="progress-info">
+                                    <span id="progressPercent">0% completo</span>
+                                    <span id="commentsCount">0 comentários</span>
+                                </div>
+                            </div>
+                            <button id="deleteBookBtn" class="btn btn-danger">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path d="M3 6h18"></path>
+                                    <path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"></path>
+                                    <path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"></path>
+                                </svg>
+                                Deletar Livro
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header">
+                            <h2>Capítulos</h2>
+                        </div>
+                        <div class="card-content">
+                            <div id="chaptersList" class="chapters-list">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

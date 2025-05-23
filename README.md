@@ -29,7 +29,7 @@ Uma aplicação web simples para organizar e acompanhar sua leitura de livros e 
 
 ```bash
 git clone https://github.com/rafaelamachadocamara/book-tracking-app.git
-cd book-tracker
+cd book-tracking-app
 ```
 
 2. Abra o arquivo `index.html` no navegador:

@@ -26,25 +26,17 @@ git clone https://github.com/seu-usuario/book-tracker.git
 cd book-tracker
 Abra o arquivo index.html no navegador:
 
-bash
-Copiar
-Editar
 # No terminal ou explorer
 open index.html
 # ou clique duas vezes no arquivo
 Não é necessário instalar dependências — tudo roda diretamente no navegador.
 
-🖼️ Captura de tela
-Adicione uma imagem de exemplo aqui (ex: ./screenshot.png) para mostrar a interface do app.
-
 📁 Estrutura do projeto
-pgsql
-Copiar
-Editar
 book-tracker/
 ├── index.html
 ├── style.css
 └── script.js
+
 📄 Licença
 Este projeto está licenciado sob a MIT License.
 

@@ -1,4 +1,4 @@
-# 📚 Book Tracker
+# 📚 Book Tracking App
 
 Uma aplicação web simples para organizar e acompanhar sua leitura de livros e capítulos. Ideal para quem quer visualizar o progresso de leitura de forma prática e agradável.
 
@@ -47,7 +47,7 @@ open index.html
 ## 📁 Estrutura do projeto
 
 ```
-book-tracker/
+book-tracking-app/
 ├── index.html
 ├── style.css
 └── script.js

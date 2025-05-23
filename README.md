@@ -28,7 +28,7 @@ Uma aplicação web simples para organizar e acompanhar sua leitura de livros e 
 1. Clone este repositório:
 
 ```bash
-git clone [https://github.com/seu-usuario/book-tracker.git](https://github.com/rafaelamachadocamara/book-tracking-app.git)
+git clone https://github.com/seu-usuario/book-tracker.git
 cd book-tracker
 ```
 

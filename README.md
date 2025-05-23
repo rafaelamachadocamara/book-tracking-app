@@ -31,16 +31,16 @@ open index.html
 # ou clique duas vezes no arquivo
 Não é necessário instalar dependências — tudo roda diretamente no navegador.
 
-📁 Estrutura do projeto
+## 📁 Estrutura do projeto
 book-tracker/
 ├── index.html
 ├── style.css
 └── script.js
 
-📄 Licença
+## 📄 Licença
 Este projeto está licenciado sob a MIT License.
 
-🙋‍♀️ Contribuições
+## 🙋‍♀️ Contribuições
 Sinta-se à vontade para enviar sugestões, relatar problemas ou abrir pull requests!
 
 Feito com 💜 usando apenas HTML, CSS e JavaScript.
